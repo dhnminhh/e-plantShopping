@@ -4,11 +4,29 @@ import { addItem } from './CartSlice';
 import { Link } from 'react-router-dom';
 
 const plantsData = [
+  // Danh mục 1: Air Purifying (6 cây)
   { category: 'Air Purifying', id: 1, name: 'Snake Plant', price: 15, thumbnail: 'https://via.placeholder.com/100' },
   { category: 'Air Purifying', id: 2, name: 'Spider Plant', price: 12, thumbnail: 'https://via.placeholder.com/100' },
-  // THÊM CÁC SẢN PHẨM KHÁC VÀO ĐÂY ĐỂ ĐẠT YÊU CẦU ĐỀ BÀI
+  { category: 'Air Purifying', id: 3, name: 'Peace Lily', price: 18, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Air Purifying', id: 4, name: 'Boston Fern', price: 14, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Air Purifying', id: 5, name: 'Rubber Plant', price: 20, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Air Purifying', id: 6, name: 'English Ivy', price: 10, thumbnail: 'https://via.placeholder.com/100' },
+
+  // Danh mục 2: Succulents (6 cây)
   { category: 'Succulents', id: 7, name: 'Aloe Vera', price: 10, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Succulents', id: 8, name: 'Jade Plant', price: 12, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Succulents', id: 9, name: 'Echeveria', price: 8, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Succulents', id: 10, name: 'Zebra Plant', price: 14, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Succulents', id: 11, name: 'Burros Tail', price: 15, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Succulents', id: 12, name: 'Haworthia', price: 9, thumbnail: 'https://via.placeholder.com/100' },
+
+  // Danh mục 3: Indoor Trees (6 cây)
   { category: 'Indoor Trees', id: 13, name: 'Ficus', price: 45, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Indoor Trees', id: 14, name: 'Fiddle Leaf Fig', price: 50, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Indoor Trees', id: 15, name: 'Money Tree', price: 35, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Indoor Trees', id: 16, name: 'Parlor Palm', price: 25, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Indoor Trees', id: 17, name: 'Yucca', price: 40, thumbnail: 'https://via.placeholder.com/100' },
+  { category: 'Indoor Trees', id: 18, name: 'Dracaena', price: 30, thumbnail: 'https://via.placeholder.com/100' },
 ];
 
 function ProductList() {
