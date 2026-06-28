@@ -1,32 +1,28 @@
-import React from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import ProductList from './ProductList';
-import CartItem from './CartItem';
 import './App.css';
 
-// Component giao diện trang chủ
-function LandingPage() {
-  const navigate = useNavigate();
-
-  return (
-    <div className="landing-page">
-      <h1>Paradise Nursery</h1>
-      <p>Where Green Meets Serenity</p>
-      <button onClick={() => navigate('/products')} className="get-started-btn">
-        Get Started
-      </button>
-    </div>
-  );
-}
-
-// Component chính chứa bộ định tuyến
 function App() {
+  const [showProductList, setShowProductList] = useState(false);
+
+  const handleGetStarted = () => {
+    setShowProductList(true);
+  };
+
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/products" element={<ProductList />} />
-      <Route path="/cart" element={<CartItem />} />
-    </Routes>
+    <>
+      {!showProductList ? (
+        <div className="landing-page">
+          <h1>Welcome to Paradise Nursery</h1>
+          <p>Where Green Meets Serenity</p>
+          <button onClick={handleGetStarted} className="get-started-btn">
+            Get Started
+          </button>
+        </div>
+      ) : (
+        <ProductList />
+      )}
+    </>
   );
 }
 
